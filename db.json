@@ -1,0 +1,325 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "image": "https://kong-proxy-aws.toyota-europe.com/c1-images/resize/ccis/680x680/png/tr/product-token/7497dfcf-a771-4a46-8e30-02a1c4ea31f0/vehicle/47cb6e98-90ab-4dda-baa5-d3b1d111a351/padding/50,50,50,50/image-quality/70/day-exterior-04_040.webp",
+      "brandId": "1",
+      "brandName": "Toyota",
+      "colorId": "1",
+      "colorName": "white",
+      "dailyPrice": "500",
+      "description": "Toyota Corolla Hybrid"
+    },
+    {
+      "id": 2,
+      "image": "https://www.mercedes-benz.com.tr/passengercars/mercedes-benz-cars/models/c-class/saloon/design/design-packages/amg-optics/_jcr_content/par/productinfotextimage/media2/slides/videoimageslide_e3a3/image.MQ6.12.20190927190444.jpeg",
+      "brandId": "2",
+      "brandName": "Mercedes",
+      "colorId": "2",
+      "colorName": "black",
+      "dailyPrice": "1500",
+      "description": "Mercedes C-200D"
+    },
+    {
+      "id": 3,
+      "image": "https://i2.cnnturk.com/i/cnnturk/75/1200x0/626bdbc3214ed82130344663.jpg",
+      "brandId": "3",
+      "brandName": "BMW",
+      "colorId": "3",
+      "colorName": "gray",
+      "dailyPrice": "1.800",
+      "description": "BMW 5.20İ"
+    },
+    {
+      "id": 4,
+      "image": "https://img.joomcdn.net/58152fc3f782f4e99ffb45bfd337b6fac379733d_1024_692.jpeg",
+      "brandId": "4",
+      "brandName": "Honda",
+      "colorId": "4",
+      "colorName": "red",
+      "dailyPrice": "750",
+      "description": "Honda Civic"
+    },
+    {
+      "id": 5,
+      "image": "https://tesla-cdn.thron.com/delivery/public/image/tesla/03e533bf-8b1d-463f-9813-9a597aafb280/bvlatuR/std/4096x2560/M3-Homepage-Desktop-LHD",
+      "brandId": "5",
+      "brandName": "Tesla",
+      "colorId": "4",
+      "colorName": "red",
+      "dailyPrice": "2215",
+      "description": "Electrent Tesla Model 3 Long Range Full Elektrik Auto Pilot"
+    },
+    {
+      "id": 6,
+      "image": "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/huracan/evo_rwd_spyder/2022/10_06/gallery/hura_evo_rwd_spy_01.jpg",
+      "brandId": "6",
+      "brandName": "Lamborghini",
+      "colorId": "4",
+      "colorName": "red",
+      "dailyPrice": "17.000",
+      "description": "Lamborghini Huracan Evo Spyder"
+    },
+    {
+      "id": 7,
+      "image": "https://pics.porsche.com/rtt/iris?COSY-EU-100-1713c6eK12UC31P3T5JOCU%25hjdmiTDDmvMXlHWguCuq6Q44RtRHo9ZAaDjau5PwI7tGW3rNbZJNKXv9Z7KcQQ%25yFN5tFAsXrw4r3wo0qnqZr8MCnR4i84tV2YN2OmNyW1QGWgCWKMUuyO9I7KM8JihQ52DDgfNagKyX87TQ9br3uwrD1XEUA%25Y1O8uJWRoW%25h3xFHOKOtw9xeXi69skh5H",
+      "brandId": "7",
+      "brandName": "Porsche",
+      "colorId": "1",
+      "colorName": "white",
+      "dailyPrice": "4750",
+      "description": "Porsche Boxster 718 Cabrio"
+    },
+    {
+      "id": 8,
+      "image": "https://www.ford.com/is/image/content/dam/vdm_ford/live/en_us/ford/nameplate/mustang/2022/collections/dm/21_FRD_MST_344_ay_1q_C1s.tif?croppathe=1_16x9&wid=900",
+      "brandId": "8",
+      "brandName": "Mustang",
+      "colorId": "4",
+      "colorName": "red",
+      "dailyPrice": "4000",
+      "description": "Ford Mustang 2.3 Fastback"
+    },
+    {
+      "image": "https://pbs.twimg.com/media/EMzGKLYWwAMcqww.jpg",
+      "brandId": "9",
+      "colorId": "4",
+      "brandName": "Togg",
+      "colorName": "red",
+      "dailyPrice": "0",
+      "description": "Bekleniyor",
+      "id": 9
+    },
+    {
+      "image": "https://otomobil.fiat.com.tr/content/dam/fiat/TR/yeni-egea/cross/lounge/model-hero/Egea-Cross-Cross-Plus-Mistik-Gri_680x430px.png",
+      "brandId": "10",
+      "colorId": "3",
+      "brandName": "FIAT",
+      "colorName": "gray",
+      "dailyPrice": "500",
+      "description": "Fiat Egea Cross",
+      "id": 10
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Toyota",
+      "image": "../assets/images/brands/toyota.png"
+    },
+    {
+      "id": 2,
+      "name": "Mercedes",
+      "image": "../assets/images/brands/mercedes.png"
+    },
+    {
+      "id": 3,
+      "name": "BMW",
+      "image": "../assets/images/brands/bmw.png"
+    },
+    {
+      "id": 4,
+      "name": "Honda",
+      "image": "../assets/images/brands/honda.png"
+    },
+    {
+      "id": 5,
+      "name": "Tesla",
+      "image": "../assets/images/brands/tesla.png"
+    },
+    {
+      "id": 6,
+      "name": "Lamborghini",
+      "image": "../assets/images/brands/lamborghini.png"
+    },
+    {
+      "id": 7,
+      "name": "Porsche",
+      "image": "../assets/images/brands/porsche.png"
+    },
+    {
+      "id": 8,
+      "name": "Mustang",
+      "image": "https://productimages.hepsiburada.net/s/54/375/11195112063026.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Togg",
+      "image": "../assets/images/brands/togg.png"
+    },
+    {
+      "id": 10,
+      "name": "FIAT",
+      "image": "../assets/images/brands/fiat.png"
+    },
+    {
+      "name": "Onur Atilla",
+      "image": "https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/model_detail/huracan/evo_rwd_spyder/2022/10_06/gallery/hura_evo_rwd_spy_01.jpg",
+      "id": 11
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "name": "white",
+      "image": "../assets/images/colors/white.jpg"
+    },
+    {
+      "id": 2,
+      "name": "black",
+      "image": "../assets/images/colors/black.jpg"
+    },
+    {
+      "id": 3,
+      "name": "gray",
+      "image": "../assets/images/colors/gray.jpg"
+    },
+    {
+      "id": 4,
+      "name": "red",
+      "image": "../assets/images/colors/red.jpg"
+    }
+  ],
+  "additionalServices": [
+    {
+      "id": 1,
+      "additional": "Home delivery",
+      "price": "150",
+      "description": "Eve teslimat"
+    },
+    {
+      "id": 2,
+      "additional": "Return address",
+      "price": "150",
+      "description": "Adresten iade"
+    },
+    {
+      "id": 3,
+      "additional": "Additional driver",
+      "price": "160",
+      "description": "Kiralık aracınıza ek bir sürücü eklemek isteyebilirsiniz ."
+    },
+    {
+      "id": 4,
+      "additional": "GPS",
+      "price": "100",
+      "description": "Navigasyon"
+    },
+    {
+      "id": 5,
+      "additional": "Child seat",
+      "price": "40",
+      "description": "Çocuk koltuğu"
+    },
+    {
+      "id": 6,
+      "additional": "Roadside assistance",
+      "price": "100",
+      "description": "HGS ''Hızlı Geçiş Sistemi''"
+    },
+    {
+      "id": 7,
+      "additional": "Mini damage insurance",
+      "price": "60",
+      "description": "Lastik - cam - far sigortası"
+    },
+    {
+      "id": 8,
+      "additional": "Automobile  CASCO",
+      "price": "250",
+      "description": "Full Kasko"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "adsoyad": "Ali",
+      "mail": "ali@mail.com",
+      "admin": "1",
+      "parola": "123",
+      "kaytarih": "1668070115626",
+      "duztarih": "1668085146787"
+    },
+    {
+      "id": 2,
+      "adsoyad": "veli",
+      "mail": "veli@mail.com",
+      "admin": "0",
+      "parola": "123",
+      "kaytarih": "1668070283323",
+      "duztarih": "1668085150210"
+    },
+    {
+      "id": 3,
+      "adsoyad": "Onur",
+      "mail": "onur@mail.com",
+      "admin": "1",
+      "parola": "123",
+      "kaytarih": "1670105241334",
+      "duztarih": "1670165116505"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "adi": "Toyota",
+      "kaytarih": "1668069636299",
+      "duztarih": "1670100489693"
+    },
+    {
+      "id": 2,
+      "adi": "Mercedes",
+      "kaytarih": "1669493025838",
+      "duztarih": "1670100593533"
+    },
+    {
+      "id": 3,
+      "adi": "BMW",
+      "kaytarih": "1670100601516",
+      "duztarih": "1670100601516"
+    },
+    {
+      "id": 4,
+      "adi": "Honda",
+      "kaytarih": "1670100606884",
+      "duztarih": "1670100606884"
+    },
+    {
+      "id": 5,
+      "adi": "Tesla",
+      "kaytarih": "1670100610948",
+      "duztarih": "1670100610948"
+    },
+    {
+      "id": 6,
+      "adi": "Lamborghini",
+      "kaytarih": "1670100617916",
+      "duztarih": "1670100617916"
+    },
+    {
+      "id": 7,
+      "adi": "Porsche",
+      "kaytarih": "1670105055976",
+      "duztarih": "1670105055976"
+    },
+    {
+      "id": 8,
+      "adi": "Mustang",
+      "kaytarih": "1670105066775",
+      "duztarih": "1670105066775"
+    },
+    {
+      "id": 9,
+      "adi": "Togg",
+      "kaytarih": "1670105076879",
+      "duztarih": "1670105076879"
+    },
+    {
+      "id": 10,
+      "adi": "Fiat",
+      "kaytarih": "1670105080063",
+      "duztarih": "1670105080063"
+    }
+  ],
+  "rental": []
+}
