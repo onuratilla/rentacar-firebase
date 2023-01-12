@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Sepet <i class="fa-solid fa-shopping-cart"></i>
+      </button>
+      <table
+        ngbDropdownMenu
+        aria-labelledby="dropdownBasic1"
+        style="width: 200px"
+      >
+        <tr ngbDropdownItem *ngFor="let cartItem of cartItems">
+          <td>{{ cartItem.car.brandName }}{{ cartItem.car.dailyPrice }}</td>
+          <ul>
+            <li><strong>Toplam Fiyat : </strong>{{ cartItem.totalPrice }}₺</li>
+          </ul>
+          <td>
+            <button
+              class="btn btn-primary"
+              (click)="removeFromCart(cartItem.car)"
+            >
+              <i class="fa fa-trash"></i>
+            </button>
+          </td>
+          <ul>
+            <li *ngFor="let additionalItem of cartItem.additionalService">
+              {{ additionalItem.additional }}{{ additionalItem.price }}
+            </li>
+          </ul>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

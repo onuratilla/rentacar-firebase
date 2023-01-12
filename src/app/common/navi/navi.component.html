@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg bg-dark text-light">
+  <div class="container">
+    <a class="navbar-brand text-light" href="">Onur Atilla's Place</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/cars">Araç Listesi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/additionalServices">Ek Hizmetler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/kategoriler">Kategoriler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/rental">Kiralayanlar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/panel">Panel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/reservation">Rezervasyon</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mx-2"><app-cart-summary></app-cart-summary></div>
+    <div>
+      <div ngbDropdown class="d-inline-block">
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+        {{servis.aktifUye.adsoyad}} <i class="fa-solid fa-user"></i>
+        </button>
+        <ul ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <li ngbDropdownItem routerLink="/login">
+            <i class="fa-solid fa-user-check"></i>Giriş
+          </li>
+          <li ngbDropdownItem routerLink="/panel"><i class="fa-solid fa-user-plus"></i>Kayıt Ol</li>
+          <hr />
+          <li ngbDropdownItem (click)="OturumKapat()">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>Çıkış Yap
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div ngbDropdown class="d-inline-block mx-2">
+        <button
+          type="button"
+          class="btn btn-outline-warning"
+          id="dropdownBasic1"
+          ngbDropdownToggle
+        >
+          <i class="fa-solid fa-globe"></i>
+        </button>
+        <select
+          ngbDropdownMenu
+          aria-labelledby="dropdownBasic1"
+          #selLang
+          (change)="translateLanguageTo(selLang.value)"
+        >
+          <option
+            ngbDropdownItem
+            *ngFor="let language of _translateService.getLangs()"
+            [value]="language"
+          >
+            {{ language }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</nav>
