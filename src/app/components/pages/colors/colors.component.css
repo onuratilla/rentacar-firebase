@@ -1,0 +1,15 @@
+.list-group-item {
+  margin-bottom: 10px;
+  border-radius: none;
+  background: #eeeeee;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  transform: scaleX(1.1);
+}
+
+h6 {
+  margin-left: 10px;
+}

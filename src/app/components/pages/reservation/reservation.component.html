@@ -1,0 +1,129 @@
+<div class="container-fluid px-1 py-5 mx-auto">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 text-center">
+      <h3>REZERVASYONU KONTROL EDİN VE TAMAMLAYIN</h3>
+      <div class="card">
+        <h5 class="text-center mb-4">Kişisel Bilgiler</h5>
+        <form class="form-card" onsubmit="event.preventDefault()">
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3"
+                ><strong>Adınız</strong
+                ><span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="Enter your first name"
+                onblur="validate(1)"
+              />
+            </div>
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3"
+                ><strong>Soyadınız</strong
+                ><span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Enter your last name"
+                onblur="validate(2)"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3 mb-1"
+                ><strong>Ülke Kodu</strong
+                ><span class="text-danger"> *</span></label
+              >
+              <select class="form-control px-4 py-2 rounded">
+                <option value="+90">(+90) Türkiye</option>
+                <option value="+49">(+49) Almanya</option>
+                <option value="+33">(+33) Fransa</option>
+                <option value="+359">(+359) Bulgaristan</option>
+                <option value="+48">(+48) Polonya</option>
+                <option value="+39">(+39) İtalya</option>
+                <option value="+31">(+31) Hollonda</option>
+                <option value="+30">(+30) Yunanistan</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-8 flex-column d-flex">
+              <label class="form-control-label px-3"
+                ><strong>Telefon Numarası</strong
+                ><span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="mob"
+                name="mob"
+                placeholder="(5xx) xxx xx xx"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-8 flex-column d-flex">
+              <label class="form-control-label px-3"
+                ><strong>Email Adresiniz</strong
+                ><span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                onblur="validate(3)"
+              />
+            </div>
+            <div class="form-group col-sm-4 flex-column d-flex">
+              <label class="form-control-label px-3"
+                ><strong>&nbsp;</strong><span class="text-danger"> </span
+              ></label>
+              <button class="btn btn-success px-4" routerLink="/panel">Giriş Yap</button>
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-sm-6 flex-column d-flex">
+              <label class="form-control-label px-3"
+                ><strong>İşiniz</strong
+                ><span class="text-danger"> *</span></label
+              >
+              <input
+                type="text"
+                id="job"
+                name="job"
+                placeholder=""
+                onblur="validate(5)"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-between text-left">
+            <div class="form-group col-12 flex-column d-flex">
+              <label class="form-control-label px-3"
+                >Ne için kullanacaksınız?<span class="text-danger">
+                  *</span
+                ></label
+              >
+              <input
+                type="text"
+                id="ans"
+                name="ans"
+                placeholder=""
+                onblur="validate(6)"
+              />
+            </div>
+          </div>
+          <div class="row justify-content-end">
+            <div class="form-group col-sm-6">
+              <button type="submit" class="btn-block btn-primary" routerLink="/payment/success">
+                Gönder
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<h1>Yeni Marka Ekle</h1>
+<form #brandAddForm="ngForm" (ngSubmit)="add(brandAddForm)">
+  <div class="form-group m-2">
+    <input
+      type="text"
+      placeholder="marka adı"
+      #name="ngModel"
+      [(ngModel)]="brand.name"
+      class="form-control"
+      name="name"
+      id="name"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="name.invalid && name.dirty">
+      Boş bırakılamaz!
+    </div>
+  </div>
+  <div class="form-group m-2">
+    <input
+      type="text"
+      placeholder="image url"
+      #image="ngModel"
+      [(ngModel)]="brand.image"
+      class="form-control"
+      name="image"
+      id="image"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="image.invalid && image.dirty">
+      Boş bırakılamaz!
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="servis.aktifUye.admin==0"
+  >
+    Marka Ekle
+  </button>
+</form>

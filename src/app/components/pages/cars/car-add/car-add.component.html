@@ -1,0 +1,109 @@
+<h1>Yeni Araç Ekle</h1>
+<form #carAddForm="ngForm" (ngSubmit)="add(carAddForm)">
+  <div class="form-group m-2">
+    <input
+      type="text"
+      placeholder="image url"
+      #image="ngModel"
+      [(ngModel)]="car.image"
+      class="form-control"
+      name="image"
+      id="image"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="image.invalid && image.dirty">
+      Boş bırakılamaz!
+    </div>
+  </div>
+  <!-- <div class="form-group m-2">
+    <input
+      type="text"
+      placeholder="brand id"
+      #brandId="ngModel"
+      [(ngModel)]="car.brandId"
+      class="form-control"
+      name="brandId"
+      id="brandId"
+      required
+    />
+    <div class="alert alert-danger" *ngIf="brandId.invalid && brandId.dirty">
+      Boş bırakılamaz!!
+    </div>
+  </div> -->
+  <label for="input" class="form-label" required>Marka</label>
+  <select
+    class="form-control"
+    required
+    name="brandId"
+    id="brandId"
+    [(ngModel)]="car.brandId"
+  >
+    <option *ngFor="let brand of brands" [value]="brand.id">
+      {{ brand.name }}
+    </option>
+  </select>
+
+  <label for="input" class="form-label" required>Renk</label>
+  <select
+    class="form-control"
+    required
+    name="colorId"
+    id="colorId"
+    [(ngModel)]="car.colorId"
+  >
+    <option *ngFor="let color of colors" [value]="color.id">
+      {{ color.name }}
+    </option>
+  </select>
+  <input
+    type="hidden"
+    name="brandName"
+    id="brandName"
+    [(ngModel)]="car.brandName"
+  />
+  <input
+    type="hidden"
+    name="colorName"
+    id="colorName"
+    [(ngModel)]="car.colorName"
+  />
+  <div class="form-group m-2">
+    <input
+      type="text"
+      placeholder="günlük fiyat"
+      #dailyPrice="ngModel"
+      [(ngModel)]="car.dailyPrice"
+      class="form-control"
+      name="dailyPrice"
+      id="dailyPrice"
+      required
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="dailyPrice.invalid && dailyPrice.dirty"
+    >
+      Boş bırakılamaz!!
+    </div>
+  </div>
+  <div class="form-group m-2">
+    <input
+      type="text"
+      placeholder="açıklama"
+      #description="ngModel"
+      [(ngModel)]="car.description"
+      class="form-control"
+      name="description"
+      id="description"
+      required
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="description.invalid && description.dirty"
+    >
+      Boş bırakılamaz!!
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="servis.aktifUye.admin==0">
+    Araç ekle
+  </button>
+</form>

@@ -1,0 +1,22 @@
+<h1>Araç Detay</h1>
+<div class="card mb-3">
+  <div class="row g-0" *ngFor="let car of cars">
+    <div class="col-md-4">
+      <img [src]="car.image" class="img-fluid rounded-start" alt="..." />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ car.brandName }}</h5>
+        <h4 class="card-title text-primary">{{ car.colorName }}</h4>
+        <p class="card-text"><b>Açıklama : </b>{{ car.description }}</p>
+        <h1 class="text-danger">Günlük Fiyat : {{ car.dailyPrice }}₺</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div><app-additional-services></app-additional-services></div>
+<div class="">
+  <button class="btn btn-secondary" routerLink="/reservation">
+    Rezervasyona git
+  </button>
+</div>

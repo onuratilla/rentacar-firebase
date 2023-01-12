@@ -1,0 +1,75 @@
+<div class="container d-flex justify-content-center">
+  <ul class="list-group mt-5 text-white text-center">
+    <div class="mb-2">
+      <h2 class="text-dark">Renkler</h2>
+      <button class="btn btn-secondary" routerLink="/colorAdd">
+        Yeni Renk Ekle
+      </button>
+    </div>
+    <li
+      class="list-group-item d-flex justify-content-between align-content-center"
+      *ngFor="let color of colors"
+    >
+      <div class="d-flex flex-row">
+        <img [src]="color.image" width="35" class="rounded-circle" />
+        <div>
+          <h6>{{ color.name }}</h6>
+        </div>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success"
+          routerLink="/colorUpdate/{{ color.id }}"
+          title="Color Update"
+        >
+          <i class="fa-solid fa-edit"></i>
+        </button>
+        <button
+          class="btn btn-danger"
+          (click)="open(content, color.id)"
+          title="Color Delete"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+        <button
+          class="btn btn-primary"
+          routerLink="/colors/{{ color.id }}"
+          title="Get Color By Color"
+        >
+          <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">
+        Silmek istediğinizden emin misiniz?
+      </h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="deleteColorById(deleteId)"
+      >
+        Evet
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        (click)="modal.close('Save click')"
+      >
+        Hayır
+      </button>
+    </div>
+  </ng-template>
+</div>

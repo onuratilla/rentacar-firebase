@@ -1,0 +1,93 @@
+<div class="mb-2">
+  <h2>Ek Hizmetler</h2>
+  <button class="btn btn-secondary" routerLink="/additionalServiceAdd">
+    Yeni ek hizmet ekle
+  </button>
+</div>
+<table class="table table-light">
+  <thead>
+    <tr>
+      <th scope="col">Ek Hizmet</th>
+      <th scope="col">Fiyat</th>
+      <th scope="col">Açıklama</th>
+      <th>Düzenle</th>
+      <th>Sil</th>
+      <th>Sepete Ekle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let additionalService of additionalServices">
+      <td>{{ additionalService.additional }}</td>
+      <td>{{ additionalService.price }}₺</td>
+      <td>{{ additionalService.description }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-success"
+          routerLink="/additionalServiceUpdate/{{ additionalService.id }}"
+          title="Update Additional Service"
+        >
+          <i class="fa-solid fa-edit"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-danger"
+          (click)="open(content, additionalService.id)"
+          title="Delete Additional Service"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-primary"
+          title="Add To Cart"
+          (click)="addToCart(additionalService)"
+          *ngIf="isAdded(additionalService.id) == false"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-primary"
+          title="Add To Cart"
+          (click)="removeAdditionalService(additionalService.id)"
+          *ngIf="isAdded(additionalService.id) == true"
+        >
+          <i class="fa-solid fa-close"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      Silmek istediğinizden emin misiniz?
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-success"
+      (click)="deleteAdditionalServiceById(deleteId)"
+    >
+      Evet
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-danger"
+      (click)="modal.close('Save click')"
+    >
+      Hayır
+    </button>
+  </div>
+</ng-template>

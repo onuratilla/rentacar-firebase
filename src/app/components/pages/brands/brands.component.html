@@ -1,0 +1,75 @@
+<div class="container d-flex justify-content-center">
+  <ul class="list-group mt-5 text-white text-center">
+    <div class="mb-2">
+      <h2 class="text-dark">Markalar</h2>
+      <button class="btn btn-secondary" routerLink="/brandAdd">
+        Yeni Marka Ekle
+      </button>
+    </div>
+    <li
+      class="list-group-item d-flex justify-content-between align-content-center"
+      *ngFor="let brand of brands"
+    >
+      <div class="d-flex flex-row">
+        <img [src]="brand.image" width="40" />
+        <div>
+          <h6>{{ brand.name }}</h6>
+        </div>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-success"
+          routerLink="/brandUpdate/{{ brand.id }}"
+          title="Brand Update"
+        >
+          <i class="fa-solid fa-edit"></i>
+        </button>
+        <button
+          class="btn btn-danger"
+          (click)="open(content, brand.id)"
+          title="Brand Delete"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+        <button
+          class="btn btn-primary"
+          routerLink="/brands/{{ brand.id }}"
+          title="Get Car By Brand"
+        >
+          <i class="fa-solid fa-eye"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">
+        Silmek istediğinizden emin misiniz?
+      </h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="deleteBrandById(deleteId)"
+      >
+        Evet
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        (click)="modal.close('Save click')"
+      >
+        Hayır
+      </button>
+    </div>
+  </ng-template>
+</div>
